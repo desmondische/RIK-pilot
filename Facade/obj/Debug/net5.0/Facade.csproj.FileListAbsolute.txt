@@ -1,0 +1,12 @@
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Facade\bin\Debug\net5.0\abc.Facade.deps.json
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Facade\bin\Debug\net5.0\abc.Facade.dll
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Facade\bin\Debug\net5.0\ref\abc.Facade.dll
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Facade\bin\Debug\net5.0\abc.Facade.pdb
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Facade\obj\Debug\net5.0\Facade.csprojAssemblyReference.cache
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Facade\obj\Debug\net5.0\Facade.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Facade\obj\Debug\net5.0\Facade.AssemblyInfoInputs.cache
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Facade\obj\Debug\net5.0\Facade.AssemblyInfo.cs
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Facade\obj\Debug\net5.0\Facade.csproj.CoreCompileInputs.cache
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Facade\obj\Debug\net5.0\abc.Facade.dll
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Facade\obj\Debug\net5.0\ref\abc.Facade.dll
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Facade\obj\Debug\net5.0\abc.Facade.pdb

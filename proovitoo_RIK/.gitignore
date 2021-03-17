@@ -179,6 +179,13 @@ DocProject/Help/html
 # Click-Once directory
 publish/
 
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
+
 # Publish Web Output
 *.[Pp]ublish.xml
 *.azurePubxml

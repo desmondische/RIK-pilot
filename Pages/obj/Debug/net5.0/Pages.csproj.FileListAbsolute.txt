@@ -1,0 +1,17 @@
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Pages\bin\Debug\net5.0\abc.Pages.deps.json
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Pages\bin\Debug\net5.0\abc.Pages.dll
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Pages\bin\Debug\net5.0\ref\abc.Pages.dll
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Pages\bin\Debug\net5.0\abc.Pages.pdb
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Pages\bin\Debug\net5.0\abc.Facade.dll
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Pages\bin\Debug\net5.0\abc.Infra.dll
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Pages\bin\Debug\net5.0\abc.Facade.pdb
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Pages\bin\Debug\net5.0\abc.Infra.pdb
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Pages\obj\Debug\net5.0\Pages.csprojAssemblyReference.cache
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Pages\obj\Debug\net5.0\Pages.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Pages\obj\Debug\net5.0\Pages.AssemblyInfoInputs.cache
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Pages\obj\Debug\net5.0\Pages.AssemblyInfo.cs
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Pages\obj\Debug\net5.0\Pages.csproj.CoreCompileInputs.cache
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Pages\obj\Debug\net5.0\Pages.csproj.CopyComplete
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Pages\obj\Debug\net5.0\abc.Pages.dll
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Pages\obj\Debug\net5.0\ref\abc.Pages.dll
+C:\Users\norin\Source\Repos\desmondische\RIK-pilot\Pages\obj\Debug\net5.0\abc.Pages.pdb

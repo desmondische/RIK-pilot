@@ -11,7 +11,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra", "..\Infra\Infra.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pages", "..\Pages\Pages.csproj", "{5A196366-9526-4817-8A24-EA363FF48DC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "..\Tests\Tests.csproj", "{89F3B789-E1E3-47A1-971E-32AF61CD9C5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "..\Tests\Tests.csproj", "{89F3B789-E1E3-47A1-971E-32AF61CD9C5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{75688688-286C-426A-A2F3-A34EE2C54847}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\Desktop\ActualClassDiagram.png = ..\..\..\..\..\Desktop\ActualClassDiagram.png
+		..\..\..\..\..\Desktop\DatabaseDiagram.png = ..\..\..\..\..\Desktop\DatabaseDiagram.png
+		..\..\..\..\..\Desktop\RIK_proovitoo_dok.docx = ..\..\..\..\..\Desktop\RIK_proovitoo_dok.docx
+		..\..\..\..\..\Desktop\UnrealizedClassDiagram.png = ..\..\..\..\..\Desktop\UnrealizedClassDiagram.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

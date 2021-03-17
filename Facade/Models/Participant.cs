@@ -15,10 +15,12 @@ namespace abc.Facade.Models
         public int ID { get; set; }
 
         [DisplayName("Eesnimi:")]
+        [RegularExpression(@"^[a-zA-Z]+$")]
         [StringLength(10, MinimumLength = 2)]
         public string FirstName { get; set; }
 
         [DisplayName("Perenimi:")]
+        [RegularExpression(@"^[a-zA-Z]+$")]
         [StringLength(15, MinimumLength = 2)]
         public string LastName { get; set; }
 

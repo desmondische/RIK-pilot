@@ -9,6 +9,7 @@ $(document).ready(function () {
         $("#legalEntity :input").val('');
         $("#person").addClass("d-none");
         $("#person :input").val('');
+        $('#customRadioInline1').prop("checked", false)
     });
 
     $("#customRadioInline1").click(function () {
@@ -16,6 +17,7 @@ $(document).ready(function () {
         $("#legalEntity :input").val('');
         $("#person").removeClass("d-none");
         $("#person :input").val('');
+        $('#customRadioInline2').prop("checked", false)
     });
 
     $('#form').click(function () {

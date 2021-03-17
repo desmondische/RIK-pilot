@@ -1,10 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Infra\**" />
+    <EmbeddedResource Remove="Infra\**" />
+    <None Remove="Infra\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
@@ -18,10 +24,6 @@
     <ProjectReference Include="..\Infra\Infra.csproj" />
     <ProjectReference Include="..\Pages\Pages.csproj" />
     <ProjectReference Include="..\proovitoo_RIK\proovitoo_RIK.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Infra\Data\" />
   </ItemGroup>
 
 </Project>
