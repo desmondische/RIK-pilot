@@ -1,0 +1,296 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+.container {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    padding-left: 1.5rem;
+}
+
+.symbol {
+    padding-right: 1.5rem;
+    width: 158px;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+h2 {
+    color: #005aa1;
+}
+
+.btn {
+    padding: .1rem 0.875rem;
+    font-size: 1.25rem;
+}
+
+.btn-primary-custom {
+    color: #fff;
+    background-color: #005aa1;
+    border-color: #1861ac;
+}
+
+    .btn-primary-custom:hover {
+        color: #fff;
+    }
+
+.btn-secondary-custom {
+    color: #000;
+    background-color: #e1e1e1;
+    border-color: #dddcdc;
+}
+
+    .btn-secondary-custom:focus {
+        box-shadow: 0px 0px 5px 0px rgba(199,199,199,1);
+    }
+
+a.btn-secondary-custom {
+    font-weight: 500;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Header styles 
+-------------------------------------------------- */
+.nav-link {
+    padding: 0.875rem 1rem;
+}
+
+.nav-item {
+    line-height: 60px;
+}
+
+    .nav-item a.nav-link:hover,
+    .nav-link.active {
+        background-color: #005aa1;
+        color: #fff !important;
+    }
+
+    .nav-item a.nav-link {
+        font-weight: bold;
+    }
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+    overflow-y: scroll;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #eff2f4;
+}
+
+.footer {
+    /*    position: absolute;
+    bottom: 0;
+    width: 100%;*/
+    white-space: nowrap;
+    /*line-height: 60px;*/
+    background-color: #373737;
+}
+
+    .footer h1 {
+        color: #e0e0e0;
+        font-weight: 400;
+    }
+
+.footer-text-block {
+    padding: 2.75rem 2.25rem;
+}
+
+    .footer-text-block ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    .footer-text-block li,
+    .footer-text-block li a {
+        text-decoration: none;
+        color: #cbcbcb;
+        font-size: 1.25rem;
+        line-height: 2.25rem;
+    }
+
+/* Main styles
+------------------------------------------- */
+
+.block-blue {
+    background-color: #005aa1;
+}
+
+.text-block {
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    text-align: left;
+    padding-left: 1.5rem;
+}
+
+    .text-block span {
+        font-weight: 500;
+    }
+
+.card {
+    border: none;
+    border-radius: 0;
+}
+
+.card-header {
+    font-size: 1.6rem;
+    padding: 1.6rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #005aa1;
+    color: #fff;
+    border-bottom: none;
+}
+
+    .card-header:first-child {
+        border-radius: 0;
+    }
+
+.card-body {
+    padding: 1rem 2rem 2rem;
+}
+
+    .card-body a {
+        color: #7e7e7e;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+.img-2 {
+    background: url(../src/assets/libled.jpg) no-repeat 45%;
+    background-size: cover;
+    height: 82px;
+}
+
+.cross-icon {
+    background: url(../src/assets/remove.svg) no-repeat 50%;
+    background-size: contain;
+    padding-left: 13px;
+}
+
+.inspect-icon {
+    background: url(../src/assets/inspect.svg) no-repeat 50%;
+    background-size: contain;
+    padding-left: 16px;
+}
+
+.col-form-label {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 0.5rem;
+}
+
+.button-box {
+    text-align: left;
+    margin: 40px 0 82px 0;
+}
+
+.input-group-text {
+    border-radius: 0;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 .75em;
+    margin-bottom: 1.25rem;
+}
+
+dt {
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+}
+
+#details tr td:nth-child(2) {
+    position: relative;
+    right: -30px
+}
+
+.table-content {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #2f2f2f;
+}
+
+.table-content dd {
+    font-size: 1.2rem;
+}
+
+.controls {
+    position: relative;
+    right: -75px;
+}
+
+.custom-control-label::before,
+.custom-control-label::after {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* @media
+------------------------------------------- */
+
+@media (min-width: 576px) {
+    .navbar-expand-sm .navbar-nav .nav-link {
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}

@@ -1,0 +1,26 @@
+﻿@using abc.Pages.Extensions
+
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-4 p-0">
+    <div class="container px-4">
+        <a class="navbar-brand" asp-area="" asp-page="/Index">
+            <img src="~/src/assets/logo.svg" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="col-md-5 mx-auto navbar-collapse collapse d-sm-inline-flex justify-content-between pl-0">
+            <ul class="navbar-nav flex-grow-1 align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link text-dark text-uppercase @Html.ActiveClass("/Index")" asp-area="" asp-page="/Index">Avaleht</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark text-uppercase @Html.ActiveClass("/Events/Create")" asp-area="" asp-page="Events/Create">Ürituse lisamine</a>
+                </li>
+            </ul>
+        </div>
+        <div class="symbol">
+            <img class="float-right" src="~/src/assets/symbol.svg" />
+        </div>
+    </div>
+</nav>

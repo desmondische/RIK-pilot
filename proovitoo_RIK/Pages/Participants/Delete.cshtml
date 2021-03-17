@@ -1,0 +1,54 @@
+﻿@page
+@model abc.proovitoo_RIK.Pages.Participants.DeleteModel
+@using abc.Pages.Extensions
+
+@{
+    Layout = "_PagesLayout";
+    ViewData["Headline"] = ViewData["Title"] = "Osavõtja kustutus";
+    var i = 1;
+}
+
+<h5>Kas soovite selle kindlasti kustutada?</h5>
+<br />
+
+<div>
+    <dl class="row table-content">
+        @if (Model.Participant.FirstName != null)
+        {
+            @Html.DisplayControlsFor(model => model.Participant.FirstName)
+            @Html.DisplayControlsFor(model => model.Participant.LastName)
+            @Html.DisplayControlsFor(model => model.Participant.PersonalCode)
+        }
+        else
+        {
+            @Html.DisplayControlsFor(model => model.Participant.LegalName)
+            @Html.DisplayControlsFor(model => model.Participant.RegisterCode)
+            @Html.DisplayControlsFor(model => model.Participant.ParticipantsQty)
+        }
+        @Html.DisplayControlsFor(model => model.Participant.PaymentType)
+        @Html.DisplayControlsFor(model => model.Participant.Comment)
+
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.Participant.Enrollments)
+        </dt>
+        <dd class="col-md-8">
+            <table>
+                <tbody>
+                    @foreach (var item in Model.Participant.Enrollments)
+                    {
+                        <tr>
+                            <td>
+                                @i.  @Html.DisplayFor(modelItem => item.Event.Title)
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                </tbody>
+            </table>
+        </dd>
+    </dl>
+
+    <form method="post" id="delete">
+        @Html.GoBackAndSubmitButtons("../Index", "Tagasi", "Kustuta")
+    </form>
+</div>

@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<div class="block block-blue">
+    <div class="row mx-auto align-items-center">
+        <div class="col-md-3">
+            <div class="text-block">
+                <h1 class="font-weight-light">@ViewData["Headline"]</h1>
+            </div>
+        </div>
+
+        <div class="col-md-9 pr-0">
+            <div class="img-fluid">
+                <div class="img-2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="block bg-white mb-4">
+    <div class="row">
+        <div class="col-md-5 mx-auto">
+            <h2 class="mt-5 mb-5">@ViewData["Headline"]</h2>
+
+            @RenderBody()
+
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

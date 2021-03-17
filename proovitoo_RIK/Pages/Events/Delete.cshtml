@@ -1,0 +1,53 @@
+﻿@page
+@model abc.proovitoo_RIK.Pages.Events.DeleteModel
+@using abc.Pages.Extensions
+
+@{
+    Layout = "_PagesLayout";
+    ViewData["Headline"] = ViewData["Title"] = "Ürituse kustutus";
+    var i = 1;
+}
+
+<h5>Kas soovite selle kindlasti kustutada?</h5>
+<br />
+<div>
+    <dl class="row table-content">
+        @Html.DisplayControlsFor(model => model.Event.Title)
+        @Html.DisplayControlsFor(model => model.Event.Date)
+        @Html.DisplayControlsFor(model => model.Event.Location)
+        @Html.DisplayControlsFor(model => model.Event.Comment)
+
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.Event.Enrollments)
+        </dt>
+        <dd class="col-md-8">
+            <table>
+                <tbody>
+                    @foreach (var item in Model.Event.Enrollments)
+                    {
+                        var names = new List<string>();
+                        names.Add(item.Participant.FullName);
+                        names.Add(item.Participant.LegalName);
+
+                        var codes = new List<string>();
+                        codes.Add(item.Participant.PersonalCode);
+                        codes.Add(item.Participant.RegisterCode);
+                        <tr>
+                            <td style="width: 80%">
+                                @i.  @Html.DisplayFor(modelItem => names)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => codes)
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                </tbody>
+            </table>
+        </dd>
+    </dl>
+
+    <form method="post" id="delete">
+        @Html.GoBackAndSubmitButtons("../Index", "Tagasi", "Kustuta")
+    </form>
+</div>

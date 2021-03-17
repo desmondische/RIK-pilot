@@ -1,0 +1,19 @@
+﻿@page
+@model abc.proovitoo_RIK.Pages.ErrorModel
+@{
+    Layout = "_PagesLayout";
+    ViewData["Title"] = "Error";
+    ViewData["Headline"] = "Mingi viga";
+}
+
+<div class="text-center">
+    <h1 class="text-danger">Oops</h1>
+    <h2 class="text-danger">Something went wrong :(</h2>
+
+
+    <div class="button-box" style="text-align: center;">
+        <a asp-page="./Index" onClick="history.go(-1); return false;" class="btn btn-primary-custom">Tagasi</a>
+    </div>
+</div>
+
+

@@ -1,0 +1,16 @@
+﻿@page
+@model abc.proovitoo_RIK.Pages.Events.CreateModel
+@using abc.Pages.Extensions 
+
+@{
+    Layout = "_PagesLayout";
+    ViewData["Headline"] = ViewData["Title"] = "Ürituse lisamine";
+}
+
+<form method="post" id="create">
+    @Html.EditControlsFor(model => model.Event.Title, default)
+    @Html.EditControlsFor(model => model.Event.Date, "custom-date")
+    @Html.EditControlsFor(model => model.Event.Location, default)
+    @Html.EditControlsFor(model => model.Event.Comment, "textarea")
+    @Html.GoBackAndSubmitButtons("../Index", "Tagasi", "Lisa")
+</form>

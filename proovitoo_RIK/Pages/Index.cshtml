@@ -1,0 +1,77 @@
+﻿@page
+@model abc.proovitoo_RIK.Pages.Events.IndexModel
+
+@{
+    ViewData["Title"] = "Home page";
+    var i = 1;
+    var k = 1;
+}
+
+<partial name="_HeroPartial" />
+
+<div class="block-2 mb-4">
+    <div class="row mx-0">
+        <div class="col-md-6 pl-0" style="padding-right: 10px;">
+            <div class="card border-bottom">
+                <div class="card-header text-center">Tulevased üritused</div>
+                <div class="card-body">
+                    <table class="mb-5">
+                        <tbody>
+                            @foreach (var item in Model.Event)
+                            {
+                                if (DateTime.Now < item.Date)
+                                {
+                                    <tr class="mb-3">
+                                        <td class="table-content" style="width: 60%;">
+                                            @i. @Html.DisplayFor(modelItem => item.Title)
+                                        </td>
+                                        <td class="table-content" style="width: 25%;">
+                                            @Html.DisplayFor(modelItem => item.Date)
+                                        </td>
+                                        <td style="width: 15%;">
+                                            <a asp-page="Events/Details" asp-route-id="@item.ID" class="text-uppercase pr-3">Osavõtjad</a>
+                                            <a asp-page="Events/Delete" asp-route-id="@item.ID" class="cross-icon"></a>
+                                        </td>
+                                    </tr>
+                                    i++;
+                                }
+                            }
+                        </tbody>
+                    </table>
+                    <a class="text-uppercase mt-5" asp-page="Events/Create">Lisa üritus</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 pr-0" style="padding-left: 10px;">
+            <div class="card border-bottom">
+                <div class="card-header text-center">Toimunud üritused</div>
+                <div class="card-body">
+                    <table class="mb-5">
+                        <tbody>
+                            @foreach (var item in Model.Event)
+                            {
+                                if (DateTime.Now > item.Date)
+                                {
+                                    <tr class="mb-3">
+                                        <td class="table-content" style="width: 60%;">
+                                            @k. @Html.DisplayFor(modelItem => item.Title)
+                                        </td>
+                                        <td class="table-content" style="width: 25%;">
+                                            @Html.DisplayFor(modelItem => item.Date)
+                                        </td>
+                                        <td style="width: 15%;">
+                                            <a asp-page="/Events/Details" asp-route-id="@item.ID" class="text-uppercase pr-3">Osavõtjad</a>
+                                        </td>
+                                    </tr>
+                                    k++;
+                                }
+                            }
+                        </tbody>
+                    </table>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

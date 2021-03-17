@@ -1,0 +1,28 @@
+﻿@page
+@model abc.proovitoo_RIK.Pages.Participants.EditModel
+@using abc.Pages.Extensions
+
+@{
+    Layout = "_PagesLayout";
+    ViewData["Headline"] = ViewData["Title"] = "Osavõtja info";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="Participant.ID" />
+    @if (Model.Participant.FirstName == null)
+    {
+        @Html.EditControlsFor(model => model.Participant.LegalName, default)
+        @Html.EditControlsFor(model => model.Participant.RegisterCode, default)
+        @Html.EditControlsFor(model => model.Participant.ParticipantsQty, default)
+    }
+    else
+    {
+        @Html.EditControlsFor(model => model.Participant.FirstName, default)
+        @Html.EditControlsFor(model => model.Participant.LastName, default)
+        @Html.EditControlsFor(model => model.Participant.PersonalCode, default)
+    }
+
+    @Html.EditControlsForDropDown(model => model.Participant.PaymentType, Model.Payment)
+    @Html.EditControlsFor(model => model.Participant.Comment, "textarea")
+    @Html.GoBackAndSubmitButtons("../Index", "Tagasi", "Salvesta")
+</form>

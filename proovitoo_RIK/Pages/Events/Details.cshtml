@@ -1,0 +1,84 @@
+﻿@page
+@model abc.proovitoo_RIK.Pages.Events.DetailsModel
+@using abc.Pages.Extensions
+
+@{
+    Layout = "_PagesLayout";
+    ViewData["Headline"] = "Osavõtjad";
+    ViewData["Headline2"] = ViewData["Title"] = "Osavõtjate lisamine";
+    var i = 1;
+}
+
+<div>
+    <dl class="row table-content">
+        @Html.DisplayControlsFor(model => model.Event.Title)
+        @Html.DisplayControlsFor(model => model.Event.Date)
+        @Html.DisplayControlsFor(model => model.Event.Location)
+        @Html.DisplayControlsFor(model => model.Event.Comment)
+
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.Event.Enrollments)          <!-- hard to refactor, no idea :( -->
+        </dt>
+        <dd class="col-md-8">
+            <table id="details">
+                <tbody>
+                    @foreach (var item in Model.Event.Enrollments)
+                    {
+
+                        var names = new List<string>();
+                        names.Add(item.Participant.PersonalCode);
+                        names.Add(item.Participant.RegisterCode);
+
+                        var codes = new List<string>();
+                        codes.Add(item.Participant.PersonalCode);
+                        codes.Add(item.Participant.RegisterCode);
+
+                        <tr>
+                            <td>
+                                @i.  @Html.DisplayFor(modelItem => names)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => codes)
+                            </td>
+                            <td class="controls px-2">
+                                <a asp-page="/Participants/Edit" asp-route-id="@item.Participant.ID" class="inspect-icon"></a>
+                                <a asp-page="/Participants/Delete" asp-route-id="@item.Participant.ID" class="cross-icon ml-3"></a>
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                </tbody>
+            </table>
+        </dd>
+    </dl>
+</div>
+
+@if (Model.Event.Date > DateTime.Now)
+{
+    <h2 class="mb-4">@ViewData["Headline2"]</h2>
+
+    <form method="post" id="form">
+        @Html.CustomRadioButtons()
+
+        <div class="" id="person">
+            @Html.EditControlsFor(model => model.Participant.FirstName, default)
+            @Html.EditControlsFor(model => model.Participant.LastName, default)
+            @Html.EditControlsFor(model => model.Participant.PersonalCode, default)
+        </div>
+
+        <div class="d-none" id="legalEntity">
+            @Html.EditControlsFor(model => model.Participant.LegalName, default)
+            @Html.EditControlsFor(model => model.Participant.RegisterCode, default)
+            @Html.EditControlsFor(model => model.Participant.ParticipantsQty, default)
+        </div>
+
+        @Html.EditControlsForDropDown(model => model.Participant.PaymentType, Model.Payment)
+        @Html.EditControlsFor(model => model.Participant.Comment, "textarea")
+
+        @Html.GoBackAndSubmitButtons("../Index", "Tagasi", "Salvesta")
+    </form>
+}
+else
+{
+    @Html.GoBackButton("../Index", "Tagasi")
+}
