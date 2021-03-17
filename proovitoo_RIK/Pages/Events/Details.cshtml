@@ -40,10 +40,14 @@
                             <td>
                                 @Html.DisplayFor(modelItem => codes)
                             </td>
-                            <td class="controls px-2">
-                                <a asp-page="/Participants/Edit" asp-route-id="@item.Participant.ID" class="inspect-icon"></a>
-                                <a asp-page="/Participants/Delete" asp-route-id="@item.Participant.ID" class="cross-icon ml-3"></a>
-                            </td>
+                            @if (Model.Event.Date > DateTime.Now)
+                            {
+                                <td class="controls px-2">
+                                    <a asp-page="/Participants/Edit" asp-route-id="@item.Participant.ID" class="inspect-icon"></a>
+                                    <a asp-page="/Participants/Delete" asp-route-id="@item.Participant.ID" class="cross-icon ml-3"></a>
+                                </td>
+                            }
+
                         </tr>
                         i++;
                     }
