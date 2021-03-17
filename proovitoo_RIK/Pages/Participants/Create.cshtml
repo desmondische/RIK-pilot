@@ -1,0 +1,69 @@
+﻿@page
+@model abc.proovitoo_RIK.Pages.Participants.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Participant</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Participant.FirstName" class="control-label"></label>
+                <input asp-for="Participant.FirstName" class="form-control" />
+                <span asp-validation-for="Participant.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Participant.LastName" class="control-label"></label>
+                <input asp-for="Participant.LastName" class="form-control" />
+                <span asp-validation-for="Participant.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Participant.PersonalCode" class="control-label"></label>
+                <input asp-for="Participant.PersonalCode" class="form-control" />
+                <span asp-validation-for="Participant.PersonalCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Participant.LegalName" class="control-label"></label>
+                <input asp-for="Participant.LegalName" class="form-control" />
+                <span asp-validation-for="Participant.LegalName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Participant.RegisterCode" class="control-label"></label>
+                <input asp-for="Participant.RegisterCode" class="form-control" />
+                <span asp-validation-for="Participant.RegisterCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Participant.ParticipantsQty" class="control-label"></label>
+                <input asp-for="Participant.ParticipantsQty" class="form-control" />
+                <span asp-validation-for="Participant.ParticipantsQty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Participant.PaymentType" class="control-label"></label>
+                <select asp-for="Participant.PaymentType" class="form-control"></select>
+                <span asp-validation-for="Participant.PaymentType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Participant.Comment" class="control-label"></label>
+                <input asp-for="Participant.Comment" class="form-control" />
+                <span asp-validation-for="Participant.Comment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

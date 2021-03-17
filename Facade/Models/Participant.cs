@@ -25,6 +25,7 @@ namespace abc.Facade.Models
         public string LastName { get; set; }
 
         [DisplayName("Isikukood:")]
+        [RegularExpression(@"^[0-9]{11,11}$")] 
         [MaxLength(11)]
         public string PersonalCode { get; set; }
 
@@ -33,6 +34,7 @@ namespace abc.Facade.Models
         public string LegalName { get; set; }
 
         [DisplayName("Registrikood:")]
+        [RegularExpression("^\\d+$")]
         [MaxLength(8)]
         public string RegisterCode { get; set; }
 
